@@ -16,5 +16,8 @@
             "activityBar.background": "#C7EDCC"
         }
     },
-    "python.REPL.enableREPLSmartSend": false
+    "python.REPL.enableREPLSmartSend": false,
+    "files.associations": {
+        "algorithm": "cpp"
+    }
 }
