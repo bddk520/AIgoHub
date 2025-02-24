@@ -7,7 +7,7 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 for i in range(n):
-    f[i] = 1
+    f[i] = 1 # 重点，别记忘了
     for j in range(i):
         if arr[j] < arr[i]:
             f[i] = max(f[i], f[j] + 1)
