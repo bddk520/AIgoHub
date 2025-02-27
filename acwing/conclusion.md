@@ -6,7 +6,10 @@
 
 * [1010.拦截导弹](算法提高课/第一章动态规划/1010.拦截导弹/1010.拦截导弹.cpp)
   * 原题链接：[1010.拦截导弹](https://www.acwing.com/problem/content/1012/)
-  * 解题思路：Dilworth定理:把一个数列划分成最少的最长不升子序列的数目就等于这个数列的最长上升子序列的长度（LIS)
+  * 解题思路：[Dilworth定理](https://www.acwing.com/blog/content/7453/):把一个数列划分成最少的最长不升子序列的数目就等于这个数列的最长上升子序列的长度（LIS)
+* [187.导弹防御系统](算法提高课/第一章动态规划/187.导弹防御系统/187.导弹防御系统.py)
+  * 原题链接：[187.导弹防御系统](https://www.acwing.com/problem/content/189/)
+  * 解题思路：[迭代加深的dfs或者记录最小值的dfs](https://www.acwing.com/solution/content/4258/)
 
 ## 注意事项
 
