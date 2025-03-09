@@ -29,6 +29,9 @@
         "string_view": "cpp",
         "unordered_map": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "exception": "cpp",
+        "random": "cpp",
+        "limits": "cpp"
     }
 }
