@@ -16,6 +16,7 @@
 * 背包问题的总结
   * [背包问题初始化](https://www.acwing.com/blog/content/458/),[背包九讲总结](https://www.acwing.com/blog/content/5785/)
   * 先循环物品，再循环体积，最后循环决策
+  * 到底是恰好还是最多，取决于随着体积增大答案是不是一定更优秀，参考[734.能量石](https://www.acwing.com/solution/content/4639/)
 
 ## 注意事项
 
