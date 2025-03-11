@@ -32,6 +32,7 @@
         "iostream": "cpp",
         "exception": "cpp",
         "random": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "cstring": "cpp"
     }
 }
