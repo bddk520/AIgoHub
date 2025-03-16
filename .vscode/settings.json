@@ -33,6 +33,7 @@
         "exception": "cpp",
         "random": "cpp",
         "limits": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "iosfwd": "cpp"
     }
 }
