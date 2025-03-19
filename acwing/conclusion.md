@@ -50,3 +50,4 @@ print(b)  # 输出 [1, 2, 3, 4]
 * 记得开long long
 * 注意python中a = [0] + list(map(int,input().split()))，通过该操作将数组往后调整一位，不能写成a = [] + list(map(int,input().split()))，这样调整失败
 * 注意运算符重载的写法，例如题目[734.能量石](算法提高课\第一章动态规划\734.能量石\734.能量石.cpp)
+* 注意输入末尾有空格，用input.strip()
