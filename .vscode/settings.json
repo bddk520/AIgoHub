@@ -34,6 +34,7 @@
         "random": "cpp",
         "limits": "cpp",
         "cstring": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "queue": "cpp"
     }
 }
