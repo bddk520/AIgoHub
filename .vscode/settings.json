@@ -35,6 +35,7 @@
         "limits": "cpp",
         "cstring": "cpp",
         "iosfwd": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "ostream": "cpp"
     }
 }
