@@ -731,9 +731,66 @@ std::unordered_map<CustomType, ValueType, CustomHash> customMap;
 * **冲突处理** ：当不同的键通过哈希函数映射到相同的位置时，会发生哈希冲突。`std::unordered_map` 内部采用链地址法（separate chaining）来处理冲突，即在同一桶（bucket）中使用链表或其他结构存储多个元素。
 * **性能考虑** ：虽然平均情况下操作时间复杂度为 O(1)，但在最坏情况下（例如大量哈希冲突），时间复杂度可能退化为 O(n)。因此，选择合适的哈希函数和合理的桶数量对于性能至关重要。
 
-**总结：**
+### 删除元素
 
-`std::unordered_map` 提供了基于哈希表的高效键值对存储和查找功能。在使用时，需要注意哈希函数的设计，特别是当使用自定义类型作为键时。通过合理设计哈希函数和冲突处理机制，可以充分发挥哈希表在数据存取中的优势。
+```python
+#include <iostream>
+#include <unordered_map>
+
+int main() {
+    std::unordered_map<std::string, int> myMap;
+    myMap["apple"] = 1;
+    myMap["banana"] = 2;
+    myMap["cherry"] = 3;
+
+    // 删除键为 "banana" 的元素
+    myMap.erase("banana");
+
+    // 输出剩余元素
+    for (const auto& pair : myMap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+
+    return 0;
+}
+
+```
+
+### 查看大小
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+
+int main() {
+    std::unordered_map<std::string, int> myMap;
+    myMap["apple"] = 1;
+    myMap["banana"] = 2;
+    myMap["cherry"] = 3;
+
+    // 获取哈希表中元素的数量
+    std::cout << "Size of myMap: " << myMap.size() << std::endl;
+
+    return 0;
+}
+```
+
+```
+Size of myMap: 3
+```
+
+**关于“大小”的含义：**
+
+在哈希表中，“大小”通常有两个含义：
+
+1. **元素数量（size）：** 哈希表中当前存储的键值对（元素）数量。
+2. **桶数量（bucket count）：** 哈希表内部用于存储元素的桶（bucket）数量。桶的数量影响哈希表的性能，过少的桶可能导致更多的冲突，过多的桶可能浪费空间。
+
+您可以使用以下代码获取桶数量：
+
+```cpp
+std::cout << "Bucket count: " << myMap.bucket_count() << std::endl;
+```
 
 # c++好用的函数
 
