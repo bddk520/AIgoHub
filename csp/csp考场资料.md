@@ -792,6 +792,74 @@ Size of myMap: 3
 std::cout << "Bucket count: " << myMap.bucket_count() << std::endl;
 ```
 
+## queue
+
+ `std::queue` 的基本用法示例：
+
+```cpp
+#include <iostream>
+#include <queue>
+
+int main() {
+    // 创建一个整数类型的队列
+    std::queue<int> q;
+
+    // 向队列尾部添加元素
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    // 输出队列中的元素数量
+    std::cout << "队列中的元素数量: " << q.size() << std::endl;
+
+    // 输出队首元素
+    std::cout << "队首元素: " << q.front() << std::endl;
+
+    // 输出队尾元素
+    std::cout << "队尾元素: " << q.back() << std::endl;
+
+    // 移除队首元素
+    q.pop();
+    std::cout << "移除队首元素后，队首元素: " << q.front() << std::endl;
+
+    // 再次输出队列中的元素数量
+    std::cout << "队列中的元素数量: " << q.size() << std::endl;
+
+    return 0;
+}
+```
+
+输出结果：
+
+```
+队列中的元素数量: 3
+队首元素: 10
+队尾元素: 30
+移除队首元素后，队首元素: 20
+队列中的元素数量: 2
+```
+
+**常用成员函数：**
+
+* `push(const value_type& val)`：将元素 `val` 添加到队列尾部。
+* `pop()`：移除队列头部的元素。
+* `front()`：返回对队列头部元素的引用。
+* `back()`：返回对队列尾部元素的引用。
+* `empty()`：检查队列是否为空。
+* `size()`：返回队列中元素的数量。
+
+**注意事项：**
+
+* `std::queue` 不提供迭代器，因此无法像其他 STL 容器那样使用范围-based for 循环或迭代器进行遍历。要遍历队列中的元素，需要在移除元素的同时访问它们，例如：
+
+  ```cpp
+  while (!q.empty()) {
+      std::cout << q.front() << " ";
+      q.pop();
+  }
+  std::cout << std::endl;
+  ```
+
 # c++好用的函数
 
 ## 字符判断函数
