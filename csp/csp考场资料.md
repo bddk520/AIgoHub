@@ -2,8 +2,6 @@
 
 ## set
 
-在 C++ 中，集合（`set`）是一个非常有用的数据结构，它存储的是唯一的元素，且按特定的顺序自动排序。集合通常使用 `std::set` 来实现，`std::set` 是 C++ 标准库提供的一种容器，底层通常使用红黑树或其他平衡树来实现，提供高效的查找、插入和删除操作。
-
 ### 基本用法
 
 #### 1. **包含头文件**
@@ -271,11 +269,9 @@ Difference (set1 - set2): 1 2
 
 ## string
 
-在 C++ 中，`std::string` 类是标准库提供的用于处理字符串的类，封装了对字符串的各种操作，提供了更安全和便捷的功能。以下是 `std::string` 类的基本用法和常见操作：
-
 ### 1. **包含头文件**
 
-在使用 `std::string` 类之前，需要包含 `<string>` 头文件：
+在使用 `std::string` 类之前，需要包含 `<string>` 头文件：
 
 ```cpp
 #include <string>
@@ -283,7 +279,7 @@ Difference (set1 - set2): 1 2
 
 ### 2. **创建和初始化字符串**
 
-可以通过多种方式创建和初始化 `std::string` 对象：
+可以通过多种方式创建和初始化 `std::string` 对象：
 
 ```cpp
 #include <iostream>
@@ -306,7 +302,7 @@ int main() {
 
 ### 3. **获取字符串长度**
 
-使用 `length()` 或 `size()` 方法获取字符串的长度，这两个方法功能相同：
+使用 `length()` 或 `size()` 方法获取字符串的长度，这两个方法功能相同：
 
 ```cpp
 #include <iostream>
@@ -323,7 +319,7 @@ int main() {
 
 ### 4. **字符串拼接**
 
-可以使用 `+` 运算符或 `append()` 方法进行字符串拼接：
+可以使用 `+` 运算符或 `append()` 方法进行字符串拼接：
 
 ```cpp
 #include <iostream>
@@ -347,7 +343,7 @@ int main() {
 
 ### 5. **访问和修改字符串中的字符**
 
-可以使用下标运算符 `[]` 或 `at()` 方法访问和修改字符串中的字符：
+可以使用下标运算符 `[]` 或 `at()` 方法访问和修改字符串中的字符：
 
 ```cpp
 #include <iostream>
@@ -375,7 +371,7 @@ int main() {
 
 ### 6. **子字符串提取**
 
-使用 `substr()` 方法提取子字符串：
+使用 `substr()` 方法提取子字符串：
 
 ```cpp
 #include <iostream>
@@ -393,7 +389,7 @@ int main() {
 
 ### 7. **查找子字符串**
 
-使用 `find()` 方法查找子字符串的位置：
+使用 `find()` 方法查找子字符串的位置：
 
 ```cpp
 #include <iostream>
@@ -415,7 +411,7 @@ int main() {
 
 ### 8. **替换子字符串**
 
-使用 `replace()` 方法替换子字符串：
+使用 `replace()` 方法替换子字符串：
 
 ```cpp
 #include <iostream>
@@ -433,7 +429,7 @@ int main() {
 
 ### 9. **字符串比较**
 
-可以使用比较运算符（如 `==`、`!=`、`<`、`>` 等）或 `compare()` 方法进行字符串比较：
+可以使用比较运算符（如 `==`、`!=`、`<`、`>` 等）或 `compare()` 方法进行字符串比较：
 
 ```cpp
 #include <iostream>
@@ -463,7 +459,7 @@ int main() {
 
 ### 10. **转换为 C 风格字符串**
 
-使用 `c_str()` 方法将 `std::string` 转换为 C 风格字符串（以 null 终止的字符数组）：
+使用 `c_str()` 方法将 `std::string` 转换为 C 风格字符串（以 null 终止的字符数组）：
 
 ```cpp
 #include <iostream>
@@ -481,11 +477,11 @@ int main() {
 
 ## vector
 
-在 C++ 中，`std::vector` 是标准模板库（STL）提供的一个动态数组容器，能够自动管理内存，支持在运行时动态地插入和删除元素。 citeturn0search4
+在 C++ 中，`std::vector` 是标准模板库（STL）提供的一个动态数组容器，能够自动管理内存，支持在运行时动态地插入和删除元素。 citeturn0search4
 
 ### 1. **引入头文件**
 
-在使用 `std::vector` 之前，需要包含 `<vector>` 头文件：
+在使用 `std::vector` 之前，需要包含 `<vector>` 头文件：
 
 ```cpp
 #include <vector>
@@ -493,7 +489,7 @@ int main() {
 
 ### 2. **创建和初始化 `vector`**
 
-可以通过多种方式创建和初始化 `vector`：
+可以通过多种方式创建和初始化 `vector`：
 
 ```cpp
 #include <vector>
@@ -504,6 +500,8 @@ int main() {
     std::vector<int> vec2(10);             // 创建一个包含 10 个默认初始化元素的 vector
     std::vector<int> vec3(5, 100);         // 创建一个包含 5 个值为 100 的元素的 vector
     std::vector<int> vec4 = {1, 2, 3, 4};  // 使用列表初始化 vector
+ // 创建一个 n 行 m 列的二维 vector，所有元素初始化为 0
+    std::vector<std::vector<int>> vec(n, std::vector<int>(m, 0));
 
     return 0;
 }
@@ -511,7 +509,7 @@ int main() {
 
 ### 3. **访问和修改元素**
 
-可以使用下标运算符 `[]` 或 `at()` 方法访问和修改 `vector` 中的元素：
+可以使用下标运算符 `[]` 或 `at()` 方法访问和修改 `vector` 中的元素：
 
 ```cpp
 #include <vector>
@@ -534,17 +532,17 @@ int main() {
 }
 ```
 
-**注意：** `at()` 方法在访问越界时会抛出 `std::out_of_range` 异常，而使用 `[]` 运算符时，行为未定义。
+**注意：** `at()` 方法在访问越界时会抛出 `std::out_of_range` 异常，而使用 `[]` 运算符时，行为未定义。
 
 ### 4. **添加和删除元素**
 
-`std::vector` 提供了多种方法来添加和删除元素：
+`std::vector` 提供了多种方法来添加和删除元素：
 
-* **`push_back()`** ：在末尾添加元素。
-* **`pop_back()`** ：移除末尾元素。
-* **`insert()`** ：在指定位置插入元素。
-* **`erase()`** ：移除指定位置的元素或范围内的元素。
-* **`clear()`** ：移除所有元素。
+* **`push_back()`** ：在末尾添加元素。
+* **`pop_back()`** ：移除末尾元素。
+* **`insert()`** ：在指定位置插入元素。
+* **`erase()`** ：移除指定位置的元素或范围内的元素。
+* **`clear()`** ：移除所有元素。
 
 ```cpp
 #include <vector>
@@ -574,7 +572,7 @@ int main() {
 
 ### 5. **遍历 `vector`**
 
-可以使用迭代器或范围 `for` 循环遍历 `vector`：
+可以使用迭代器或范围 `for` 循环遍历 `vector`：
 
 ```cpp
 #include <vector>
@@ -601,11 +599,11 @@ int main() {
 
 ### 6. **获取大小和容量**
 
-`std::vector` 提供了以下方法来获取其大小和容量：
+`std::vector` 提供了以下方法来获取其大小和容量：
 
-* **`size()`** ：返回当前元素的数量。
-* **`capacity()`** ：返回在不重新分配内存的情况下，`vector` 可以容纳的元素数量。
-* **`empty()`** ：如果 `vector` 为空，返回 `true`，否则返回 `false`。
+* **`size()`** ：返回当前元素的数量。
+* **`capacity()`** ：返回在不重新分配内存的情况下，`vector` 可以容纳的元素数量。
+* **`empty()`** ：如果 `vector` 为空，返回 `true`，否则返回 `false`。
 
 ```cpp
 #include <vector>
@@ -624,7 +622,7 @@ int main() {
 
 ### 7. **预留和调整容量**
 
-可以使用 `reserve()` 方法预留内存，以减少多次重新分配的开销：
+可以使用 `reserve()` 方法预留内存，以减少多次重新分配的开销：
 
 ```cpp
 #include <vector>
@@ -645,7 +643,7 @@ int main() {
 }
 ```
 
-**注意：** `reserve()` 只增加容量，不改变实际元素的数量；而 `resize()` 可以改变 `vector` 的大小，并初始化新增的元素。
+**注意：** `reserve()` 只增加容量，不改变实际元素的数量；而 `resize()` 可以改变 `vector` 的大小，并初始化新增的元素。
 
 ## hash
 
@@ -783,8 +781,8 @@ Size of myMap: 3
 
 在哈希表中，“大小”通常有两个含义：
 
-1. **元素数量（size）：** 哈希表中当前存储的键值对（元素）数量。
-2. **桶数量（bucket count）：** 哈希表内部用于存储元素的桶（bucket）数量。桶的数量影响哈希表的性能，过少的桶可能导致更多的冲突，过多的桶可能浪费空间。
+1. **元素数量（size）：** 哈希表中当前存储的键值对（元素）数量。
+2. **桶数量（bucket count）：** 哈希表内部用于存储元素的桶（bucket）数量。桶的数量影响哈希表的性能，过少的桶可能导致更多的冲突，过多的桶可能浪费空间。
 
 您可以使用以下代码获取桶数量：
 
@@ -792,9 +790,225 @@ Size of myMap: 3
 std::cout << "Bucket count: " << myMap.bucket_count() << std::endl;
 ```
 
-## queue
+## deque
 
- `std::queue` 的基本用法示例：
+在 C++ 中，`deque`（双端队列）是标准模板库（STL）提供的容器，支持在序列的两端高效地插入和删除元素，同时允许随机访问。
+
+**1. 引入头文件**
+
+使用 `deque` 需要包含头文件：
+
+```cpp
+#include <deque>
+```
+
+**2. 定义双端队列**
+
+可以定义存储特定类型元素的双端队列，例如：
+
+```cpp
+  std::size_t n = 10; // 指定大小
+    int initial_value = 5; // 指定初始值
+    std::deque<int> dq(n, initial_value); // 创建一个包含 10 个元素的 deque，所有元素初始化为 5
+```
+
+**3. 常用成员函数**
+
+`deque` 提供以下常用操作：
+
+* **元素访问：**
+  * `at(size_type pos)`: 返回指定位置 `pos` 处元素的引用，并进行范围检查。
+  * `operator[](size_type pos)`: 返回指定位置 `pos` 处元素的引用，不进行范围检查。
+  * `front()`: 返回首元素的引用。
+  * `back()`: 返回尾元素的引用。
+* **修改容器：**
+  * `push_back(const T& value)`: 在末尾添加元素。
+  * `push_front(const T& value)`: 在头部添加元素。
+  * `pop_back()`: 移除末尾元素。
+  * `pop_front()`: 移除头部元素。
+  * `insert(iterator pos, const T& value)`: 在迭代器 `pos` 指定的位置前插入元素。
+  * `erase(iterator pos)`: 移除迭代器 `pos` 指定位置的元素。
+  * `clear()`: 清空所有元素。
+* **容量相关：**
+  * `empty()`: 检查是否为空，若为空返回 `true`。
+  * `size()`: 返回元素个数。
+  * `resize(size_type count)`: 调整容器大小为 `count`，多出部分用默认值填充。
+
+**4. 示例代码**
+
+以下示例演示了 `deque` 的基本用法：
+
+```cpp
+#include <iostream>
+#include <deque>
+
+int main() {
+    std::deque<int> dq;
+
+    // 在末尾添加元素
+    dq.push_back(10);
+    dq.push_back(20);
+    dq.push_back(30);
+
+    // 在头部添加元素
+    dq.push_front(5);
+    dq.push_front(0);
+
+    // 输出双端队列的元素
+    std::cout << "双端队列中的元素: ";
+    for (int num : dq) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // 访问首尾元素
+    std::cout << "首元素: " << dq.front() << std::endl;
+    std::cout << "尾元素: " << dq.back() << std::endl;
+
+    // 删除首尾元素
+    dq.pop_front();
+    dq.pop_back();
+
+    // 输出修改后的双端队列
+    std::cout << "修改后的双端队列: ";
+    for (int num : dq) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+
+**5. 注意事项**
+
+* `deque` 在两端插入和删除操作的时间复杂度为常数级别 O(1)，但在中间位置插入或删除的效率可能不如 `list`。
+* 与 `vector` 相比，`deque` 在两端操作上更为高效，但由于其内存分配方式，可能会占用更多的内存。
+
+通过以上方式，您可以在 C++ 中有效地使用 `deque` 来处理需要在序列两端频繁插入和删除的场景。
+
+### 删除元素
+
+```c++
+#include <iostream>
+#include <deque>
+
+int main() {
+    std::deque<int> dq = {10, 20, 30, 40, 50};
+
+    // 删除第三个元素（值为30）
+    auto it = dq.begin() + 2;
+    dq.erase(it);
+
+    // 输出删除后的双端队列
+    std::cout << "删除特定位置元素后的双端队列: ";
+    for (int num : dq) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+
+```
+
+# c++容器适配器
+
+## stack
+
+在C++中，`std::stack`是标准模板库（STL）提供的一个容器适配器，用于实现栈（Stack）数据结构。栈是一种遵循后进先出（LIFO，Last In First Out）原则的线性数据结构，即最后添加的元素最先被移除。
+
+**`std::stack`的常用方法：**
+
+1. **`empty()`** ：检查栈是否为空。
+
+* **返回值：**如果栈为空，返回 `true`；否则，返回 `false`。
+* **示例：**
+  ```cpp
+  std::stack<int> s;
+  if (s.empty()) {
+      // 栈为空
+  }
+  ```
+
+1. **`size()`** ：返回栈中元素的数量。
+
+* **返回值：**栈中元素的个数。
+* **示例：**
+  ```cpp
+  std::stack<int> s;
+  s.push(10);
+  s.push(20);
+  std::cout << "栈的大小: " << s.size() << std::endl; // 输出: 栈的大小: 2
+  ```
+
+1. **`top()`** ：访问栈顶元素。
+
+* **返回值：**栈顶元素的引用。
+* **注意：**在调用 `top()`之前，建议先使用 `empty()`检查栈是否为空，以避免访问非法内存。
+* **示例：**
+  ```cpp
+  std::stack<int> s;
+  s.push(10);
+  s.push(20);
+  if (!s.empty()) {
+      std::cout << "栈顶元素: " << s.top() << std::endl; // 输出: 栈顶元素: 20
+  }
+  ```
+
+1. **`push(const value_type& val)`** ：将元素添加到栈顶。
+
+* **参数：**要添加到栈顶的元素值。
+* **示例：**
+  ```cpp
+  std::stack<int> s;
+  s.push(10); // 将10压入栈顶
+  s.push(20); // 将20压入栈顶
+  ```
+
+1. **`pop()`** ：移除栈顶元素。
+
+* **注意：**在调用 `pop()`之前，建议先使用 `empty()`检查栈是否为空，以避免未定义行为。
+* **示例：**
+  ```cpp
+  std::stack<int> s;
+  s.push(10);
+  s.push(20);
+  if (!s.empty()) {
+      s.pop(); // 移除栈顶元素20
+  }
+  ```
+
+**示例代码：**
+
+```cpp
+#include <iostream>
+#include <stack>
+
+int main() {
+    std::stack<int> s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    std::cout << "栈的大小: " << s.size() << std::endl; // 输出: 栈的大小: 3
+    std::cout << "栈顶元素: " << s.top() << std::endl;   // 输出: 栈顶元素: 30
+
+    s.pop(); // 移除栈顶元素
+
+    std::cout << "移除栈顶元素后，栈的大小: " << s.size() << std::endl; // 输出: 栈的大小: 2
+    std::cout << "移除栈顶元素后，栈顶元素: " << s.top() << std::endl;   // 输出: 栈顶元素: 20
+
+    return 0;
+}
+```
+
+**注意事项：**
+
+* **底层容器：** `std::stack`默认使用 `std::deque`作为底层容器，也可以通过模板参数指定其他容器，如 `std::vector`或 `std::list`。
+* **功能限制：** `std::stack`仅提供栈的基本操作，不支持直接访问栈中间的元素，也不提供迭代器支持。如果需要更灵活的操作，可以考虑使用其他容器，如 `std::vector`或 `std::list`。
+
+## queue
 
 ```cpp
 #include <iostream>
@@ -848,17 +1062,109 @@ int main() {
 * `empty()`：检查队列是否为空。
 * `size()`：返回队列中元素的数量。
 
-**注意事项：**
+**注意事项：**`std::queue` 不提供迭代器，因此无法像其他 STL 容器那样使用范围-based for 循环或迭代器进行遍历。要遍历队列中的元素，需要在移除元素的同时访问它们，例如：
 
-* `std::queue` 不提供迭代器，因此无法像其他 STL 容器那样使用范围-based for 循环或迭代器进行遍历。要遍历队列中的元素，需要在移除元素的同时访问它们，例如：
-
-  ```cpp
+* ```cpp
   while (!q.empty()) {
       std::cout << q.front() << " ";
       q.pop();
   }
   std::cout << std::endl;
   ```
+
+## priority_queue
+
+**`std::priority_queue` 的基本用法：**
+
+1. **包含头文件：**
+
+   ```cpp
+   #include <queue>
+   ```
+2. **定义优先队列：**
+
+   ```cpp
+   std::priority_queue<Type> pq;
+   ```
+3. **常用操作：**
+
+   * **插入元素：**
+
+     ```cpp
+     pq.push(value);
+     ```
+
+     将元素 `value` 插入到优先队列中。
+   * **访问队头元素：**
+
+     ```cpp
+     Type topElement = pq.top();
+     ```
+
+     获取队头元素的值。注意，`top()` 返回的是对队头元素的引用，直接修改可能影响队列的结构。
+   * **移除队头元素：**
+
+     ```cpp
+     pq.pop();
+     ```
+
+     移除优先队列中的队头元素，即优先级最高的元素。
+   * **检查队列是否为空：**
+
+     ```cpp
+     bool isEmpty = pq.empty();
+     ```
+
+     如果队列为空，`empty()` 返回 `true`，否则返回 `false`。
+   * **获取队列大小：**
+
+     ```cpp
+     size_t size = pq.size();
+     ```
+
+     返回队列中元素的数量。
+
+**自定义优先级：**
+
+默认情况下，`std::priority_queue` 是一个最大堆，即优先级高的元素在队头。如果需要实现最小堆（即优先级低的元素在队头），可以通过自定义比较函数来实现：
+
+```cpp
+#include <iostream>
+#include <queue>
+#include <vector>
+#include <functional> // std::greater
+
+int main() {
+    // 定义最小堆的比较函数
+    auto compare = [](int left, int right) {
+        return left > right; // 返回 true 表示左边元素优先级低于右边元素
+    };
+
+    // 创建优先队列，使用 std::vector 作为底层容器，std::greater 实现最小堆
+    std::priority_queue<int, std::vector<int>, decltype(compare)> minHeap(compare);
+
+    // 插入元素
+    minHeap.push(10);
+    minHeap.push(30);
+    minHeap.push(20);
+
+    // 访问并移除元素
+    while (!minHeap.empty()) {
+        std::cout << minHeap.top() << ' '; // 输出当前最小元素
+        minHeap.pop(); // 移除当前最小元素
+    }
+
+    return 0;
+}
+```
+
+**注意事项：**
+
+* **底层容器：** `std::priority_queue` 默认使用 `std::vector` 作为底层容器，也可以通过模板参数指定其他容器类型，如 `std::deque`。
+* **不支持迭代器：** 由于其内部结构是堆，`std::priority_queue` 不提供迭代器，因此无法像其他 STL 容器那样进行范围遍历。
+* **元素唯一性：** `std::priority_queue` 允许元素重复，如果需要元素唯一性，可以在插入前进行检查。
+
+通过使用 `std::priority_queue`，您可以在 C++ 中方便地实现优先级队列，广泛应用于任务调度、图算法等需要按照优先级处理元素的场景。
 
 # c++好用的函数
 
@@ -919,13 +1225,13 @@ int main() {
 }
 ```
 
-## ## 字符串转数字
+## 字符串转数字
 
-在 C++ 中，可以使用多种方法将字符串转换为数字，主要包括 `std::stoi`、`std::atof`、`std::atoi` 等函数。以下是这些函数的详细介绍和使用示例：
+在 C++ 中，可以使用多种方法将字符串转换为数字，主要包括 `std::stoi`、`std::atof`、`std::atoi` 等函数。以下是这些函数的详细介绍和使用示例：
 
 ### 1. 使用 `std::stoi` 函数
 
-`std::stoi`（string to integer）是 C++11 引入的标准库函数，用于将 `std::string` 转换为整数。其函数签名为：
+`std::stoi`（string to integer）是 C++11 引入的标准库函数，用于将 `std::string` 转换为整数。其函数签名为：
 
 ```cpp
 int stoi(const std::string& str, std::size_t* pos = nullptr, int base = 10);
@@ -962,7 +1268,7 @@ int main() {
 
 ### 2. 使用 `std::atoi` 函数
 
-`std::atoi`（ASCII to integer）是 C 标准库函数，可在 C++ 中使用，用于将 C 风格的字符串（即以空字符 `'\0'` 结尾的字符数组）转换为整数。其函数签名为：
+`std::atoi`（ASCII to integer）是 C 标准库函数，可在 C++ 中使用，用于将 C 风格的字符串（即以空字符 `'\0'` 结尾的字符数组）转换为整数。其函数签名为：
 
 ```cpp
 int atoi(const char* str);
@@ -989,7 +1295,7 @@ int main() {
 
 ### 3. 使用 `std::atof` 函数
 
-`std::atof`（ASCII to float）用于将 C 风格的字符串转换为浮点数。其函数签名为：
+`std::atof`（ASCII to float）用于将 C 风格的字符串转换为浮点数。其函数签名为：
 
 ```cpp
 double atof(const char* str);
@@ -1015,7 +1321,7 @@ int main() {
 
 ### 4. 使用 `std::stringstream` 类
 
-`std::stringstream` 是 C++ 标准库中的类，可用于将字符串转换为各种数值类型。
+`std::stringstream` 是 C++ 标准库中的类，可用于将字符串转换为各种数值类型。
 
 **示例：**
 
@@ -1042,9 +1348,198 @@ int main() {
 
 * 使用 `std::stringstream` 进行转换时，需要检查流的状态以确保转换成功。
 
-### 总结
+### 5.toupper && tolower
 
-在 C++ 中，推荐使用 `std::stoi`、`std::stod` 等现代函数进行字符串到数字的转换，因为它们提供了异常处理机制，能够更安全地处理错误情况。而 `std::atoi`、`std::atof` 等 C 风格的函数由于缺乏错误处理机制，不建议在现代 C++ 中使用。
+```c++
+#include <iostream>
+#include <cctype>
+#include <string>
+
+int main() {
+    std::string str = "Hello, World!";
+  
+    // 转换为大写
+    for (char& c : str) {
+        c = std::toupper(static_cast<unsigned char>(c));
+    }
+    std::cout << "大写转换结果: " << str << std::endl;
+
+    // 转换为小写
+    for (char& c : str) {
+        c = std::tolower(static_cast<unsigned char>(c));
+    }
+    std::cout << "小写转换结果: " << str << std::endl;
+
+    return 0;
+}
+
+```
+
+### rand
+
+在C++中生成随机数，主要有两种方法：使用传统的 `rand()`函数和C++11引入的 `<random>`库。
+
+**1. 使用 `rand()`和 `srand()`函数：**
+
+`rand()`函数返回一个范围在 `0`到 `RAND_MAX`之间的伪随机整数。`RAND_MAX`的值通常为 `32767`，定义在 `<cstdlib>`头文件中。为了使每次程序运行时生成不同的随机数序列，需要使用 `srand()`函数设置随机数种子，通常以当前时间作为种子。
+
+示例代码：
+
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+    std::srand(static_cast<unsigned int>(std::time(nullptr))); // 设置随机数种子
+    for (int i = 0; i < 5; ++i) {
+        int random_number = std::rand();
+        std::cout << random_number << std::endl;
+    }
+    return 0;
+}
+```
+
+上述代码中，`std::srand()`使用当前时间初始化随机数种子，`std::rand()`生成随机数。需要注意的是，`rand()`生成的随机数质量有限，且不同平台上的实现可能有所差异。此外，`rand()`的随机性较弱，可能不适用于对随机性要求较高的场景。
+
+**2. 使用C++11的 `<random>`库：**
+
+C++11引入了 `<random>`头文件，提供了更为强大和灵活的随机数生成功能，包括随机数引擎和分布。推荐使用 `std::mt19937`（梅森旋转算法）作为随机数引擎，配合 `std::uniform_int_distribution`或 `std::uniform_real_distribution`等分布来生成随机数。
+
+示例代码：
+
+```cpp
+#include <iostream>
+#include <random>
+
+int main() {
+    std::random_device rd;  // 用于获得一个真正的随机数种子
+    std::mt19937 gen(rd()); // 以该种子初始化梅森旋转算法引擎
+
+    // 生成范围在[0, 100]之间的整数随机数
+    std::uniform_int_distribution<> distrib(0, 100);
+
+    for (int i = 0; i < 5; ++i) {
+        int random_number = distrib(gen);
+        std::cout << random_number << std::endl;
+    }
+    return 0;
+}
+```
+
+在上述代码中，`std::random_device`用于生成一个随机种子，`std::mt19937`是随机数引擎，`std::uniform_int_distribution<>`定义了一个均匀分布，用于生成指定范围内的整数随机数。这种方法生成的随机数质量更高，适用于对随机性要求较高的应用场景。
+
+综上所述，虽然传统的 `rand()`和 `srand()`方法简单易用，但在需要高质量随机数的情况下，建议使用C++11提供的 `<random>`库。它提供了更丰富的功能和更好的随机性，适用于更广泛的应用场景。
+
+# c++算法
+
+在C++中，`binary_search()`、`reverse()`和 `count()`是常用的算法函数，分别用于在已排序范围内查找元素、反转元素顺序以及统计元素出现次数。
+
+**1. `binary_search()`**
+
+* **功能：** 在已排序的范围内检查是否存在指定值的元素。
+* **头文件：** `<algorithm>`
+* **函数原型：**
+
+```cpp
+  template< class ForwardIterator, class T >
+  bool binary_search( ForwardIterator first, ForwardIterator last, const T& value );
+```
+
+* **参数：**
+  * `first`：指向范围起始位置的迭代器。
+  * `last`：指向范围结束位置的迭代器。
+  * `value`：要查找的值。
+* **返回值：** 如果范围内存在等于 `value`的元素，返回 `true`；否则，返回 `false`。
+* **注意：** `binary_search()`只能用于已排序的范围。
+
+**示例：**
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers = {1, 3, 5, 7, 9};
+    int value = 5;
+    if (std::binary_search(numbers.begin(), numbers.end(), value)) {
+        std::cout << value << " found in the range." << std::endl;
+    } else {
+        std::cout << value << " not found in the range." << std::endl;
+    }
+    return 0;
+}
+```
+
+**2. `reverse()`**
+
+* **功能：** 反转指定范围内元素的顺序。
+* **头文件：** `<algorithm>`
+* **函数原型：**
+
+```cpp
+  template< class BidirectionalIterator >
+  void reverse( BidirectionalIterator first, BidirectionalIterator last );
+```
+
+* **参数：**
+  * `first`：指向范围起始位置的双向迭代器。
+  * `last`：指向范围结束位置的双向迭代器。
+* **返回值：** 无。
+
+**示例：**
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+    std::reverse(numbers.begin(), numbers.end());
+    for (const auto& num : numbers) {
+        std::cout << num << ' ';
+    }
+    return 0;
+}
+```
+
+**3. `count()`**
+
+* **功能：** 统计指定范围内某个元素出现的次数。
+* **头文件：** `<algorithm>`
+* **函数原型：**
+
+```cpp
+  template< class InputIterator, class T >
+  typename std::iterator_traits<InputIterator>::difference_type
+  count( InputIterator first, InputIterator last, const T& value );
+```
+
+* **参数：**
+  * `first`：指向范围起始位置的输入迭代器。
+  * `last`：指向范围结束位置的输入迭代器。
+  * `value`：要统计的值。
+* **返回值：** 指定元素在范围内出现的次数。
+
+**示例：**
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+int main() {
+    std::vector<int> numbers = {1, 2, 2, 3, 4, 2, 5};
+    int value = 2;
+    int occurrences = std::count(numbers.begin(), numbers.end(), value);
+    std::cout << value << " appears " << occurrences << " times in the range." << std::endl;
+    return 0;
+}
+```
+
+这些算法函数在处理容器数据时非常有用，能够简洁高效地完成常见操作。
 
 # python迭代器用法
 
@@ -1171,6 +1666,336 @@ print("Symmetric Difference:", set1 ^ set2)  # {1, 2, 3, 6, 7, 8}
 * 集合中的元素是  **唯一的** ，重复元素会被自动去除。
 * 集合支持快速的 **查找、插入、删除** 操作，通常复杂度为 `O(1)`。
 
-### 总结：
+## deque
 
-Python 中的 `set` 提供了高效的集合操作，可以处理交集、并集、差集等集合运算，非常适合用于处理去重、查找和集合运算等任务。
+在Python中，`deque`（双端队列）是 `collections`模块提供的一个类，支持在序列的两端高效地添加和删除元素。与列表（`list`）相比，`deque`在两端操作时具有更优的性能，特别适用于需要频繁进行首尾插入和删除操作的场景。
+
+**1. 导入 `deque`类：**
+
+```python
+from collections import deque
+```
+
+**2. 创建 `deque`对象：**
+
+* **无固定长度的 `deque`：**
+
+```python
+  d = deque()
+```
+
+这将创建一个空的双端队列，没有长度限制。
+
+* **具有固定长度的 `deque`：**
+
+```python
+  d = deque(maxlen=3)
+```
+
+此队列最多容纳3个元素。当队列已满且有新元素加入时，最旧的元素会被自动移除。 citeturn0search9
+
+**3. 向 `deque`添加元素：**
+
+* **在右侧（尾部）添加单个元素：**
+
+```python
+  d.append('a')
+```
+
+将元素 `'a'`添加到队列的右端。
+
+* **在左侧（头部）添加单个元素：**
+
+```python
+  d.appendleft('b')
+```
+
+将元素 `'b'`添加到队列的左端。
+
+* **在右侧添加多个元素：**
+
+```python
+  d.extend(['c', 'd', 'e'])
+```
+
+依次将 `'c'`、`'d'`和 `'e'`添加到队列的右端。
+
+* **在左侧添加多个元素：**
+
+```python
+  d.extendleft(['x', 'y', 'z'])
+```
+
+依次将 `'x'`、`'y'`和 `'z'`添加到队列的左端。注意，`extendleft`会依照可迭代对象的顺序依次将元素添加到左端，因此最终队列的顺序可能与预期不同。
+
+**4. 从 `deque`中删除元素：**
+
+* **移除右侧（尾部）元素：**
+
+```python
+  right_elem = d.pop()
+```
+
+移除并返回队列右端的元素。如果队列为空，调用此方法会引发 `IndexError`异常。
+
+* **移除左侧（头部）元素：**
+
+```python
+  left_elem = d.popleft()
+```
+
+移除并返回队列左端的元素。如果队列为空，调用此方法会引发 `IndexError`异常。
+
+* **删除指定元素：**
+
+```python
+  d.remove('a')
+```
+
+移除队列中第一个值为 `'a'`的元素。如果该元素不存在，会引发 `ValueError`异常。
+
+**5. 其他常用操作：**
+
+* **旋转队列：**
+
+```python
+  d.rotate(2)
+```
+
+将队列向右旋转2个位置。若参数为负数，则向左旋转相应的步数。
+
+* **获取队列长度：**
+
+```python
+  length = len(d)
+```
+
+返回队列中的元素数量。
+
+* **访问特定位置的元素：**
+
+```python
+  elem = d[1]
+```
+
+获取索引为1的元素。需要注意的是，直接访问 `deque`中的元素在性能上可能不如列表高效。
+
+* **限制队列最大长度：**
+
+```python
+  d = deque(maxlen=5)
+```
+
+创建一个最大长度为5的 `deque`。当队列已满且有新元素加入时，最旧的元素会被自动移除。
+
+**6. 示例代码：**
+
+```python
+from collections import deque
+
+# 创建一个无固定长度的双端队列
+d = deque()
+
+# 从右侧添加元素
+d.append(1)
+d.append(2)
+
+# 从左侧添加元素
+d.appendleft(3)
+
+print(d)  # 输出: deque([3, 1, 2])
+
+# 从右侧移除元素
+right = d.pop()
+print(right)  # 输出: 2
+
+# 从左侧移除元素
+left = d.popleft()
+print(left)  # 输出: 3
+
+print(d)  # 输出: deque([1])
+```
+
+`deque`在需要高效地对序列两端进行操作的场景下非常有用，如实现队列、栈、滑动窗口等功能。与列表相比，`deque`在两端插入和删除操作上的性能更优，适合处理需要频繁进行此类操作的数据结构。
+
+## defaultdict
+
+在Python中，`defaultdict`是 `collections`模块提供的一个字典子类，功能与普通字典类似，但具有为不存在的键提供默认值的特性。使用 `defaultdict`可以避免在访问不存在的键时引发 `KeyError`异常。
+
+**1. 导入 `defaultdict`：**
+
+```python
+from collections import defaultdict
+```
+
+**2. 创建 `defaultdict`对象：**
+`defaultdict`需要一个工厂函数作为参数，该函数用于生成默认值。例如：
+
+* **默认值为整数0：**
+
+```python
+  d = defaultdict(int)
+```
+
+当访问不存在的键时，`int()`返回0。
+
+* **默认值为空列表：**
+
+```python
+  d = defaultdict(list)
+```
+
+当访问不存在的键时，`list()`返回一个空列表。
+
+* **默认值为空字符串：**
+
+```python
+  d = defaultdict(str)
+```
+
+当访问不存在的键时，`str()`返回一个空字符串。
+
+**3. 使用 `defaultdict`：**
+与普通字典相似，可以使用 `[]`操作符添加和访问元素。
+
+```python
+d = defaultdict(int)
+d['a'] += 1  # 相当于 d['a'] = d['a'] + 1
+print(d['a'])  # 输出: 1
+print(d['b'])  # 输出: 0，因为默认值为int()，即0
+```
+
+**4. 示例：统计元素出现次数**
+使用 `defaultdict`统计字符串中每个字符的出现次数：
+
+```python
+from collections import defaultdict
+
+s = 'mississippi'
+d = defaultdict(int)
+for char in s:
+    d[char] += 1
+
+print(d)
+# 输出: defaultdict(<class 'int'>, {'m': 1, 'i': 4, 's': 4, 'p': 2})
+```
+
+在此示例中，`defaultdict(int)`创建了一个默认值为0的字典，遍历字符串 `s`，统计每个字符的出现次数。
+
+**5. 示例：分组数据**
+使用 `defaultdict`将一组数据按键分组：
+
+```python
+from collections import defaultdict
+
+data = [('A', 1), ('B', 2), ('A', 3), ('B', 4), ('A', 5)]
+d = defaultdict(list)
+for key, value in data:
+    d[key].append(value)
+
+print(d)
+# 输出: defaultdict(<class 'list'>, {'A': [1, 3, 5], 'B': [2, 4]})
+```
+
+在此示例中，`defaultdict(list)`创建了一个默认值为空列表的字典，将相同键的值分组到一个列表中。
+
+**6. 注意事项：**
+
+* `defaultdict`的默认值是通过工厂函数动态生成的，而非预先定义的静态值。
+* 如果访问不存在的键，`defaultdict`会调用工厂函数生成默认值，而普通字典则会引发 `KeyError`。
+* 使用 `defaultdict`时，如果需要获取默认值类型，可以使用 `type(d.default_factory)`。
+
+通过使用 `defaultdict`，可以简化代码，避免手动检查键是否存在，提高代码的可读性和效率。
+
+## 优先队列
+
+在 Python 中，优先队列（Priority Queue）是一种特殊的队列，它允许在队列中插入具有不同优先级的元素，元素会根据优先级进行排序，并且总是优先取出优先级最高的元素。Python 标准库提供了一个模块 `queue` 和 `heapq` 来实现优先队列。
+
+### 1. 使用 `queue.PriorityQueue`
+
+`queue.PriorityQueue` 是 `queue` 模块中的一个类，它实现了一个线程安全的优先队列。该队列按照元素的优先级进行排序，优先级最低的元素会最先被取出。它是基于最小堆（min-heap）实现的。
+
+**示例：**
+
+```python
+import queue
+
+# 创建一个优先队列
+pq = queue.PriorityQueue()
+
+# 插入元素 (优先级, 元素)
+pq.put((3, 'apple'))
+pq.put((1, 'banana'))
+pq.put((2, 'cherry'))
+
+# 取出优先级最高的元素（优先级最低的值会优先被取出）
+print(pq.get())  # 输出: (1, 'banana')
+print(pq.get())  # 输出: (2, 'cherry')
+print(pq.get())  # 输出: (3, 'apple')
+```
+
+**说明：**
+
+* `put()` 用来向队列中插入元素。优先级和元素一起插入。
+* `get()` 用来从队列中取出优先级最高（即值最小）的元素。
+
+### 2. 使用 `heapq` 模块
+
+`heapq` 模块提供了一种基于堆（heap）实现的优先队列。堆是一种完全二叉树，最小堆的父节点总是小于其子节点，这使得最小元素可以在 O(1) 的时间复杂度内访问，并且插入和删除元素的操作是 O(log n) 时间复杂度。
+
+`heapq` 本身并没有专门的优先队列类，它提供了对列表进行堆操作的函数。为了实现优先队列，我们通常用一个元组 `(优先级, 元素)` 来存储数据，因为元组会首先比较优先级。
+
+**示例：**
+
+```python
+import heapq
+
+# 创建一个空的堆（即列表）
+pq = []
+
+# 插入元素（优先级，元素）
+heapq.heappush(pq, (3, 'apple'))
+heapq.heappush(pq, (1, 'banana'))
+heapq.heappush(pq, (2, 'cherry'))
+
+# 取出优先级最高的元素（优先级最低的元素）
+print(heapq.heappop(pq))  # 输出: (1, 'banana')
+print(heapq.heappop(pq))  # 输出: (2, 'cherry')
+print(heapq.heappop(pq))  # 输出: (3, 'apple')
+```
+
+**说明：**
+
+* `heappush()` 用来向堆中插入元素，并保持堆的性质。
+* `heappop()` 用来从堆中弹出最小元素（即优先级最高的元素）。
+
+### 3. `heapq` 其他函数
+
+* **`heapify()`** ：将一个列表转化为堆。
+
+```python
+  data = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+  heapq.heapify(data)
+  print(data)  # 输出: [1, 1, 2, 3, 5, 9, 4, 6, 5]
+```
+
+* **`heappushpop()`** ：将元素插入堆中，并弹出堆中最小的元素。
+
+```python
+  heapq.heappushpop(pq, (0, 'orange'))  # 插入新元素并弹出最小元素
+```
+
+## random
+
+```python
+import random
+print(random.random())  # 输出类似 0.37444887175646646
+import random
+print(random.randint(1, 5))  # 输出 1 至 5 之间的随机整数，例如 3
+import random
+print(random.randrange(0, 101, 2))  # 输出 0 至 100 之间的随机偶数，例如 40
+import random
+items = ['apple', 'banana', 'cherry']
+print(random.choice(items))  # 输出 'apple'、'banana' 或 'cherry'
+
+```
